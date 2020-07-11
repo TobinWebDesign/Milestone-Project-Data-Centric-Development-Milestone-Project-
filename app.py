@@ -5,15 +5,16 @@ from bson.objectid import ObjectId
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'recipes'
-app.config["MONGO_URI"] = os.getenv("MONGO_URI")
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+
 @app.route('/')
 @app.route('/get_recipes')    
 def get_recipes():
-    return render_template("allrecipies.html", recipies=mongo.db.all_recipes.find())
+    return render_template("allrecipes.html", recipes=mongo.db.all_recipes.find())
 
 
 
