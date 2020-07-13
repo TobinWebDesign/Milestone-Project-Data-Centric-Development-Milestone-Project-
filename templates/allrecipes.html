@@ -1,12 +1,37 @@
 {% extends "base.html" %}
 {% block content %}
-
-    <h2>I'm extending the base template</h2>
-    {% for recipe in all_recipes %}
-        {{ recipe.recipe_name }}<br>
-        {{ recipe.recipe_cook_time }}<br>
-        {{ recipe.recipe_servings }}<br>
-        {{ recipe.recipe_instructions }}<br>
-        {{ recipe.recipe_ingredients }}
-    {% endfor %}
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br><br>
+            <h1 class="header center orange-text">Recipify</h1>
+            <div class="row center">
+                <h5 class="header col s12 light">Making food simple by sharing tastes</h5>
+            </div>
+            <div class="row center">
+                <a href="#" id="download-button" class="btn-large waves-effect waves-light orange">Login</a>
+                <a href="#" id="download-button" class="btn-large waves-effect waves-light orange">Register</a>
+            </div>
+            <div class="row center">
+                <a href="#" id="download-button" class="btn-large waves-effect waves-light orange">Search Recipes</a>
+            </div>
+            <br><br>
+            
+            <div class="row">
+            <h2 class="center light-blue-text">Latest Recipes</h2>
+            {% for recipe in all_recipes %}
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center">{{ recipe.recipe_name }}</h2>
+                        <h5 class="center">{{ recipe.recipe_cook_time }}</h5>
+                        <h3 class="center"> {{ recipe.recipe_servings }}</h3>
+                        <p class="light">{{ recipe.recipe_instructions }}</p>
+                        <p class="light">{{ recipe.recipe_ingredients }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>    
+        </div>
+    </div>
+    
+    
 {% endblock %}
