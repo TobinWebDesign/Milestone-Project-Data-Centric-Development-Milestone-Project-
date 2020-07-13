@@ -1,2 +1,4 @@
 env.py
 __pychache__/
+*core.Microsoft*
+*core.*

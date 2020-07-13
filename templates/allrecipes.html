@@ -1,14 +1,18 @@
-<html>
-    <head>
-    
-    </head>
-    <body>
-        {% for recipe in all_recipes %}
-            {{recipe.recipe_name}}
-            {{recipe.recipe_cook_time}}
-            {{recipe.recipe_servings}}
-            {{recipe.recipe_instructions}}
-            {{recipe.recipe_ingredients}}
-        { % endfor %}
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipify</title>
+</head>
+<body>
+<H1>Recipify</H1>
+    {% for recipe in all_recipes %}
+        {{ recipe.recipe_name }}<br>
+        {{ recipe.recipe_cook_time }}<br>
+        {{ recipe.recipe_servings }}<br>
+        {{ recipe.recipe_instructions }}<br>
+        {{ recipe.recipe_ingredients }}
+    {% endfor %}
+</body>
 </html>
