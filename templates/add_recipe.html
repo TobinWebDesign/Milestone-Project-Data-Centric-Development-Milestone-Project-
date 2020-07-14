@@ -6,60 +6,78 @@
             <h1 class="header center orange-text">Add a new Recipe</h1>
 <!--Materialise form to imput recipes-->
             <div class="row">
-            <form class="col s12">
-      <div class="row">
-        <div class="input-field col s6">
-          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-          <label for="first_name">First Name</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate">
-          <label for="last_name">Last Name</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-          <label for="disabled">Disabled</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="password" type="password" class="validate">
-          <label for="password">Password</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
-          <label for="email">Email</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col s12">
-          This is an inline input field:
-          <div class="input-field inline">
-            <input id="email_inline" type="email" class="validate">
-            <label for="email_inline">Email</label>
-            <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
-          </div>
-        </div>
-      </div>
+            <form action="" method="POST" class="col s12">
+                <div class="row">
+                    <div class="input-field center col s12">
+                    <input placeholder="What is your awesome recipe's cool name?" id="recipe_name" type="text" class="validate">
+                    <label for="recipe_name">Recipe Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field center col s12">
+                    <input placeholder="1 hour 30 minutes" id="recipe_cook_time" type="text" class="validate">
+                    <label for="recipe_cook_time">Cooking Time</label>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="input-field center col s12">
+                    <input placeholder="How many mouths will this feed?" id="recipe_servings" type="text" class="validate">
+                    <label for="recipe_servings">Servings</label>
+                    </div>
+                </div>  
+                <!-- <div class="row">
+                    <div class="input-field col s12">
+                    <select id="recipe_servings"  class="validate">
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="1">1-2</option>
+                        <option value="2">2-4</option>
+                        <option value="3">5-7</option>
+                        <option value="4">8-10</option>
+                    </select>
+                    <input id="recipe_servings" type="range" class="validate" min="0" max="10" />
+                    <br>
+                    <label for="recipe_servings">Servings</label>
+                    </div>
+                </div> -->
+                <div class="row">
+                    <div class="input-field col s12">
+                    <input placeholder="List each Instruction - one per line" id="recipe_instructions" type="text" class="validate">
+                    <label for="recipe_instructions">Recipe Instructions</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                    <input placeholder="List each Ingredient - one per line" id="recipe_ingredients" type="text" class="validate">
+                    <label for="recipe_ingredients">Ingredients</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select id="category" name="meal_category">
+                        <option value="" disabled selected>Is this for meat lovers, veggy lovers, or fish lovers?</option>
+                    {% for cat in categories %}
+                        <option value="{{cat.meal_category}}">{{cat.meal_category}}</option>
+                    {% endfor %}
+                    </select>
+                        <label>Recipe Category</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <select id="meal_type" name="meal_type_name">
+                        <option value="" disabled selected>Which Meal Of the Day</option>
+                    {% for meal in meal_type %}
+                        <option value="{{meal.meal_type_name}}">{{meal.meal_type_name}}</option>
+                    {% endfor %}
+                    </select>
+                        <label>Meal Of the Day</label>
+                    </div>
+                </div>
+                <div class="row center">
+                    <a href="#" id="download-button" class="btn-large waves-effect waves-light orange">Add Recipe</a>
+                </div>
             </form>
             </div>
-
-            <div class="row center">
-                <h5 class="header col s12 light">Making food simple by sharing tastes</h5>
-            </div>
-            <div class="row center">
-                <a href="#" id="download-button" class="btn-large waves-effect waves-light orange">Login</a>
-                <a href="#" id="download-button" class="btn-large waves-effect waves-light orange">Register</a>
-            </div>
-            <div class="row center">
-                <a href="#" id="download-button" class="btn-large waves-effect waves-light orange">Search Recipes</a>
-            </div>
-            <br><br>
-            
             <div class="row">
             <h2 class="center light-blue-text">Latest Recipes</h2>
             {% for recipe in all_recipes %}
@@ -76,6 +94,5 @@
             </div>    
         </div>
     </div>
-    
     
 {% endblock %}
