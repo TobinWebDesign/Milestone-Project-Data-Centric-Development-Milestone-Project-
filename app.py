@@ -31,11 +31,25 @@ def add_recipe():
                            categories=mongo.db.categories.find(),
                            meal_type=mongo.db.meal_type.find())
 
+@app.route('/insert_recipe', methods=['POST'])
+def insert_recipe():
+    all_recipes = mongo.db.all_recipes
+    all_recipes.insert_one(request.form.to_dict())
+    return redirect(url_for('get_recipes'))
+
 '''login'''
 
 @app.route('/login')
 def login():
     return render_template('login.html')
+
+#--------------------------------- Categories ------------------------------
+
+@app.route('/get_categories')
+def get_categories():
+    return render_template('categories.html',
+    categories=mongo.db.categories.find())
+
 
 if __name__ == "__main__":
     app.run(host=os.getenv("IP", "0.0.0.0"),

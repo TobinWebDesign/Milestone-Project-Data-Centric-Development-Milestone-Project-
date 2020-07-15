@@ -6,7 +6,7 @@
             <h1 class="header center orange-text">Add a new Recipe</h1>
 <!--Materialise form to imput recipes-->
             <div class="row">
-            <form action="" method="POST" class="col s12">
+            <form ction="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
                 <div class="row">
                     <div class="input-field center col s12">
                     <input placeholder="What is your awesome recipe's cool name?" id="recipe_name" type="text" class="validate">
@@ -53,6 +53,25 @@
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
+                        <select id="meal_type" name="meal_type_name">
+                        <option value="" disabled selected>Which Meal Of the Day</option>
+                    {% for meal in meal_type %}
+                        <option value="{{meal.meal_type_name}}">{{meal.meal_type_name}}</option>
+                    {% endfor %}
+                    </select>
+                        <label>Meal Of the Day</label>
+                    </div>
+                </div> 
+                <div class="switch">
+                    <label>
+                        <input id="is_vegetarian" name="is_vegetarian" type="checkbox">
+                        <span class="lever"></span>
+                        Is veggy
+                    </label>
+                </div>
+                <!--
+                <div class="row">
+                    <div class="input-field col s12">
                         <select id="category" name="meal_category">
                         <option value="" disabled selected>Is this for meat lovers, veggy lovers, or fish lovers?</option>
                     {% for cat in categories %}
@@ -62,19 +81,12 @@
                         <label>Recipe Category</label>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <select id="meal_type" name="meal_type_name">
-                        <option value="" disabled selected>Which Meal Of the Day</option>
-                    {% for meal in meal_type %}
-                        <option value="{{meal.meal_type_name}}">{{meal.meal_type_name}}</option>
-                    {% endfor %}
-                    </select>
-                        <label>Meal Of the Day</label>
-                    </div>
-                </div>
+                -->
                 <div class="row center">
-                    <a href="#" id="download-button" class="btn-large waves-effect waves-light orange">Add Recipe</a>
+                     <button class="btn-large waves-effect waves-light orange" type="submit" name="action">Add Recipe
+                         <i class="material-icons right">playlist_add</i>
+                    </button>
+                    
                 </div>
             </form>
             </div>
@@ -85,7 +97,7 @@
                     <div class="icon-block">
                         <h2 class="center">{{ recipe.recipe_name }}</h2>
                         <h5 class="center">{{ recipe.recipe_cook_time }}</h5>
-                        <h3 class="center"> {{ recipe.recipe_servings }}</h3>
+                        <h3 class="center">{{ recipe.recipe_servings }}</h3>
                         <p class="light">{{ recipe.recipe_instructions }}</p>
                         <p class="light">{{ recipe.recipe_ingredients }}</p>
                     </div>

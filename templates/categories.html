@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br><br>
+            <h1 class="header center orange-text">Categories</h1>
+            {% for category in categories %}
+            
+                <div >
+                        <div class="task_header col s9">
+                            <h2 class="header center orange-text">{{category.meal_category}}</h2> 
+                        </div>
+                </div>
+            
+            {% endfor %}
+            <div class="row">
+            <h2 class="center light-blue-text">Latest Recipes</h2>
+            {% for recipe in all_recipes %}
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center">{{ recipe.recipe_name }}</h2>
+                        <h5 class="center">{{ recipe.recipe_cook_time }}</h5>
+                        <h3 class="center">{{ recipe.recipe_servings }}</h3>
+                        <p class="light">{{ recipe.recipe_instructions }}</p>
+                        <p class="light">{{ recipe.recipe_ingredients }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>    
+        </div>
+    </div>
+    
+{% endblock %}
