@@ -21,11 +21,14 @@
             {% for recipe in all_recipes %}
                 <div class="col s12 m4">
                     <div class="icon-block">
-                        <h2 class="center">{{ recipe.recipe_name }}</h2>
-                        <h5 class="center">{{ recipe.recipe_cook_time }}</h5>
-                        <h3 class="center"> {{ recipe.recipe_servings }}</h3>
-                        <p class="light">{{ recipe.recipe_instructions }}</p>
-                        <p class="light">{{ recipe.recipe_ingredients }}</p>
+                     <!-- Recipe Image -->
+                        <img src="{{recipe.recipe_image}}"class="" class="materialboxed" width="100%" alt="{{recipe.recipe_name}}">
+                     <!-- Recipe INTRO -->
+                        <h5 class="center">{{ recipe.recipe_name }}</h5>
+                        <h6 class="center"><i class="fas fa-clock"></i>{{ recipe.recipe_cook_time }}</h6>
+                        <h6 class="center"><i class="fas fa-utensils"></i> {{ recipe.recipe_servings }}</h6>
+                        <!-- <p class="light">{{ recipe.recipe_instructions }}</p>
+                        <p class="light">{{ recipe.recipe_ingredients }}</p> -->
                     </div>
                 </div>
             {% endfor %}
