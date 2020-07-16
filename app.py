@@ -21,6 +21,7 @@ mongo = PyMongo(app)
 @app.route('/get_recipes')
 def get_recipes():
     all_recipes = mongo.db.all_recipes.find()
+    print(all_recipes) 
     return render_template("allrecipes.html", all_recipes=all_recipes)
 
 '''Add recipe'''
@@ -43,7 +44,18 @@ def insert_recipe():
 def login():
     return render_template('login.html')
 
+
+'''shows the recipe on a blog page of its own.'''
+
+@app.route('/recipe_page/<recipe_id>')
+def recipe_display(recipe_id):
+    recipe = mongo.db.all_recipes.find_one({'_id': ObjectId(recipe_id)})
+    print(recipe) 
+    return render_template('recipe_page.html', recipe=recipe)
+
 #--------------------------------- Categories ------------------------------
+
+
 
 @app.route('/get_categories')
 def get_categories():
