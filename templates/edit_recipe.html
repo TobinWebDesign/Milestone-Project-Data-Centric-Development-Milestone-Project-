@@ -6,7 +6,7 @@
             <h1 class="header center orange-text">Edit Recipe</h1>
 <!--Materialise form to imput recipes-->
             <div class="row">
-            <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
+            <form action="{{ url_for('update_recipe', recipe_id=edit_recipe._id) }}" method="POST" class="col s12">
                 <div class="row">
                     <div class="input-field center col s12">
                     <input placeholder="What is your awesome recipe's cool name?" name="recipe_name" id="recipe_name" type="text" class="validate">
@@ -95,20 +95,6 @@
                     
                 </div>
             </form>
-            </div>
-            <div class="row">
-            <h2 class="center light-blue-text">Latest Recipes</h2>
-            {% for recipe in all_recipes %}
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center">{{ recipe.recipe_name }}</h2>
-                        <h5 class="center">{{ recipe.recipe_cook_time }}</h5>
-                        <h3 class="center">{{ recipe.recipe_servings }}</h3>
-                        <p class="light">{{ recipe.recipe_instructions }}</p>
-                        <p class="light">{{ recipe.recipe_ingredients }}</p>
-                    </div>
-                </div>
-            {% endfor %}
             </div>    
         </div>
     </div>

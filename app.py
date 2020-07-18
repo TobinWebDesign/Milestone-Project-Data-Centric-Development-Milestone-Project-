@@ -56,20 +56,19 @@ def recipe_display(recipe_id):
 
 ''' Edit recipe  NEED TO BUILD UPDATE_RECIPE'''
 
-app.route('/edit_recipe/<recipe_id>')
-def edit_recipe(recipr_id):
-    the_recipe =  mongo.db.all_recipes.find_one({"_id": ObjectId(recipe_id)})
+@app.route('/edit_recipe/<recipe_id>')
+def edit_recipe(recipe_id):
+    edit_recipe = mongo.db.all_recipes.find_one({"_id": ObjectId(recipe_id)})
     meal_type = mongo.db.meal_type.find()
-    print(edit_recipe)
-    return render_template('edit_recipe.html', recipe=the_recipe,
-                           meal_type=meal_typ)
+    categories = mongo.db.categories.find()
+    return render_template('edit_recipe.html', edit_recipe=edit_recipe,
+                           categories=categories,
+                           meal_type=meal_type)
 
-
-@app.route('/update_recipe/<recipe_id>', methods=["POST"])
+@app.route('/update_recipe/<recipe_id>', methods=['POST'])
 def update_recipe(recipe_id):
     all_recipes = mongo.db.all_recipes
-    print(recipe) 
-    recipe.update( {'_id': ObjectId(recipe_id)},
+    all_recipes.update({'_id': ObjectId(recipe_id)},
     {
         'recipe_name':request.form.get('recipe_name'),
         'recipe_cook_time':request.form.get('recipe_cook_time'),
@@ -80,8 +79,7 @@ def update_recipe(recipe_id):
         'is_vegetarian':request.form.get('is_vegetarian')
     })
     return redirect(url_for('get_recipes'))
-
-
+    
 #--------------------------------- Categories ------------------------------
 
 

@@ -7,8 +7,18 @@
  */
  
 .icon-block {
-  padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    height: 400px;
 }
+
+.recipe-block {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
 .icon-block .material-icons {
 	font-size: inherit;
 }
