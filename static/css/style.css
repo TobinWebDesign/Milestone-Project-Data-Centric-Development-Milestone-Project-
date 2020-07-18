@@ -27,3 +27,15 @@
     padding: 5px;
     font-weight: 900;
 }
+
+.recipe-search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.header-search {
+    width: 200px;
+}
+.waves-effect {
+    border: none;
+}
