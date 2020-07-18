@@ -16,7 +16,7 @@
             </div>
             <br><br>
             
-            <div class="row">
+            <div class="row center">
             <h2 class="center light-blue-text">Latest Recipes</h2>
             {% for recipe in all_recipes %}
                 <div class="col s12 m4">
@@ -27,6 +27,8 @@
                         <h5 class="center">{{ recipe.recipe_name }}</h5>
                         <h6 class="center"><i class="fas fa-clock"></i>{{ recipe.recipe_cook_time }}</h6>
                         <h6 class="center"><i class="fas fa-utensils"></i> {{ recipe.recipe_servings }}</h6>
+                        <!--Full Recipe View Button -->
+                        <a href="{{url_for('recipe_display', recipe_id=recipe._id)}}" class="btn waves-effect waves-light orange">View Full Recipe</a>
                         <!-- <p class="light">{{ recipe.recipe_instructions }}</p>
                         <p class="light">{{ recipe.recipe_ingredients }}</p> -->
                     </div>

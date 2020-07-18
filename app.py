@@ -54,10 +54,19 @@ def recipe_display(recipe_id):
     return render_template('recipe_page.html', recipe=recipe)
 
 
-''' Edit recipe  NED TO BUILD UPDATE_RECIPE'''
+''' Edit recipe  NEED TO BUILD UPDATE_RECIPE'''
 
-@app.route('/edit_recipe/<recipe_id>', methods=["POST"])
-def edit_recipe(recipe_id):
+app.route('/edit_recipe/<recipe_id>')
+def edit_recipe(recipr_id):
+    the_recipe =  mongo.db.all_recipes.find_one({"_id": ObjectId(recipe_id)})
+    meal_type = mongo.db.meal_type.find()
+    print(edit_recipe)
+    return render_template('edit_recipe.html', recipe=the_recipe,
+                           meal_type=meal_typ)
+
+
+@app.route('/update_recipe/<recipe_id>', methods=["POST"])
+def update_recipe(recipe_id):
     all_recipes = mongo.db.all_recipes
     print(recipe) 
     recipe.update( {'_id': ObjectId(recipe_id)},
@@ -70,24 +79,7 @@ def edit_recipe(recipe_id):
         'recipe_image': request.form.get('recipe_image'),
         'is_vegetarian':request.form.get('is_vegetarian')
     })
-    return render_template('edit_recipe.html', recipe=recipe)
-
-
-@app.route('/edit_recipe/<recipe_id>', methods=["POST"])
-def edit_recipe(recipe_id):
-    all_recipes = mongo.db.all_recipes
-    print(recipe) 
-    recipe.update( {'_id': ObjectId(recipe_id)},
-    {
-        'recipe_name':request.form.get('recipe_name'),
-        'recipe_cook_time':request.form.get('recipe_cook_time'),
-        'recipe_instructions': request.form.get('recipe_instructions'),
-        'recipe_servings': request.form.get('recipe_servings'),
-        'recipe_ingredients': request.form.get('recipe_ingredients'),
-        'recipe_image': request.form.get('recipe_image'),
-        'is_vegetarian':request.form.get('is_vegetarian')
-    })
-    return render_template('edit_recipe.html', recipe=recipe)
+    return redirect(url_for('get_recipes'))
 
 
 #--------------------------------- Categories ------------------------------
