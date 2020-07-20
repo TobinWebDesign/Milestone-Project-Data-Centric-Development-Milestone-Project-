@@ -24,6 +24,24 @@ def get_recipes():
     print(all_recipes) 
     return render_template("allrecipes.html", all_recipes=all_recipes)
 
+
+''' Search Recipe'''
+
+@app.route('/search', methods=['GET', 'POST'])
+def search():
+    print("search")    
+    keywords = request.form.get('search')
+    query = ({'$text': {'$search': keywords}})
+    results = mongo.db.all_recipes.find(query)
+    return render_template('search_recipes.html', recipes=results)
+
+
+
+@app.route('/search_recipes', methods=['GET', 'POST'])
+def list_recipes():
+
+    return render_template('search_recipes.html', recipes=mongo.db.all_recipes.find())
+
 '''Add recipe'''
 
 @app.route('/add_recipe')
@@ -84,6 +102,7 @@ def update_recipe(recipe_id):
 def delete_recipe(recipe_id):
     mongo.db.all_recipes.remove({'_id': ObjectId(recipe_id)})
     return redirect(url_for('get_recipes'))
+
 
 #--------------------------------- Categories ------------------------------
 
