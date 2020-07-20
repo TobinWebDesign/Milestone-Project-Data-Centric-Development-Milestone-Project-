@@ -31,14 +31,13 @@ def get_recipes():
 def search():
     print("search")    
     keywords = request.form.get('search')
-    query = ({'$text': {'$search': keywords}})
-    results = mongo.db.all_recipes.find(query)
-    return render_template('search_recipes.html', recipes=results)
+    recipes = list(mongo.db.all_recipes.find({"recipe_name": {"$regex": f'.{keywords}.'}}))
+    return render_template('search_recipes.html', recipes=recipes)
 
 
 
 @app.route('/search_recipes', methods=['GET', 'POST'])
-def list_recipes():
+def search_recipes():
 
     return render_template('search_recipes.html', recipes=mongo.db.all_recipes.find())
 

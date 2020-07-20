@@ -16,7 +16,7 @@
     </div>
     <div class="container">
     <!-- Search Box -->
-                    <form class="recipe-search center" method="POST">
+                    <form class="recipe-search center" action="{{ url_for('search')}}"  method="POST">
                         <input type="text" class="form-control" placeholder="Search Recipes by keyword" id="search" name="search" required>
                         
                         <button class="waves-effect waves-light transparent" type="submit" name="action"><i class="fa fa-search"></i></button>
