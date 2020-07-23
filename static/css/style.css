@@ -40,3 +40,7 @@
 .waves-effect {
     border: none;
 }
+
+.section.no-pad-bot {
+    min-height: 80vh;
+}
