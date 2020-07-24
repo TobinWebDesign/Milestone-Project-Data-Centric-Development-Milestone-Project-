@@ -2,7 +2,10 @@
 </h1>
 
 <h2>Project Summary</h2>
-<p>Recipify - Recipe sharing app. The purpose is to build a full-stack site that allows users to manage a common dataset about a particular domain that allows users to create, locate, read, update and delete (CRUD) recipes. Recipify gives access to all the recipes in the database to all users. All users can add new recipes as well as edit, locate, and delete other recipes
+<p>Recipify - Recipe sharing app. The purpose is to build a full-stack site that allows users to manage a common dataset about a particular domain that allows users to create, locate, read, update and delete (CRUD) recipes. Recipify gives access to all the recipes in the database to all users. All users can add new recipes as well as edit, locate, and delete other recipes.
+</p>
+<p>
+The project can be viewed <a href="https://recipify-food-app.herokuapp.com/">here</a>
 </p>
 
 <h2>Wireframes</h2>
@@ -185,7 +188,7 @@ This website is currently viewable with no deployment issues in:
 <li>Microsorft Edge</li>
 <li>Safari</li>
 
-<h2> Bugs...</h2>.</h2>
+<h2> Bugs </h2>
 <li>...</li>
 <li>...</li>
 <li>...</li>
@@ -195,7 +198,7 @@ This website is currently viewable with no deployment issues in:
 <h1>Depolyment</h1>
 <h3>Deployment to Heroku
 </h3>
-In order to deploy my project to Heroku I have completed the following steps, you can view it <a href="#">here</a>.
+In order to deploy my project to Heroku I have completed the following steps, you can view it <a href="https://recipify-food-app.herokuapp.com/">here</a>.
 <li>Created a Procfile with the command echo web: python run.py > Procfile.</li>
 <li>Created a requirement.txt file so Heroku know what python modules it will need to run my application with the command pip freeze > requirements.txt
 </li>
@@ -213,19 +216,12 @@ In order to deploy my project to Heroku I have completed the following steps, yo
 
 <h1>Credits</h1>
 <ul>
-<li>I got the ...</li>
-<li>I got the ...</li>
+<li>I got the recipes and images from <a href="https://www.bbc.co.uk/food/recipes">BBC FOOD</a> </li>
+<li>I got the website template from <a href="https://www.bbc.co.uk/food/recipes">Materalize</a> </li>
 <li>I got the ...</li>
 </ul>
 
 
-<h2>Media</h2>
-
-
-<li>The hero photo used in this website is licenced to <a href="#">________Photography </a></li>
-
-<li>The favicon image was made using [https://favicon.io/](https://favicon.io/).</li>
-
 <h2>Acknowledgements</h2>
 
-<P>My mentor Anthony Ngene also helped me out with UX improvements, duplicate code issues, loading lag on Maps API. Most importantly Anthony guided me through how to make the markers load when the page loaded.  Design inspiration came from Airbnb, Booking.com and other tourism websites. </P>
+<P>My thanks to my mentor Anthony Ngene also helped me out with python issues and the tutoring team at the Code Institute .  </P>
