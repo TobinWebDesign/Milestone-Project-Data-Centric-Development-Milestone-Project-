@@ -16,6 +16,7 @@
     {% block nav %} 
         {% include 'includes/_navbar.html' %} 
     {% endblock %}
+    
     <div class="container">
     <!-- Search Box -->
                     <form class="recipe-search" action="{{ url_for('search')}}"  method="POST">
@@ -27,6 +28,8 @@
     </div>
     {% block content %}
     {% endblock %}
+
+<!--- Footer -->
     {% block footer %} 
         {% include 'includes/_footer.html' %} 
     {% endblock %}
@@ -34,20 +37,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="js/materialize.js"></script>
-    <script src="js/init.js"></script>
+    <script src="{{ url_for('static', filename='js/materialize.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/init.js') }} "></script>
 
-<!-- JS Queries-->
 
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('select').material_select();
-        });
-
-        document.getElementById("matfix").addEventListener("click", function(e) {
-	        e.stopPropagation();
-            });
-    </script>
     {% block scripts %}
     {% endblock %}
   
