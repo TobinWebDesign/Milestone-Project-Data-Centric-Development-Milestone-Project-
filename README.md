@@ -10,10 +10,8 @@ The project can be viewed <a href="https://recipify-food-app.herokuapp.com/">her
 
 <h2>Wireframes</h2>
 <p>I've used AdobeXD to create my wireframe / mock-up. All my wireframes can be found in the following link
-Initial Wireframes for the site:
+Initial Wireframes for the site: <a href="https://github.com/TobinWebDesign/Milestone-Project-Data-Centric-Development-Milestone-Project-/tree/master/wireframes">Wireframes</a>| 
 
-Desktop: <a href="#">Home </a>| 
-Mobile: <a href="#">Home </a>| 
 </p>
 <h1>UX</h1>
 
@@ -150,26 +148,14 @@ View | Add | Edit | Delete | Search
 </h4>
 <li>The search box is visible on all pages and allows users search keywords in the recipe title. </li>
 
-
-<li>...</li>
-<li>...</li>
-<h2>Testing the...</h2>
-<li>...</li>
-<li>...</li>
-<li>...</li>
-<li>...</li>
-<h2>As a user...</h2>
-<li>...</li>
-<li>...</li>
-<li>...</li>
-<li>...</li>
-<h2>Testing links betweens pages</h2>
-For this section I tested all of the links between the pages, navigation bar and and links built into the page. Testing all of the links resulted in everything linking to another page in the website working as intended by staying within the tab.
-All links to which the user is directed to another site opened in a separate browser tab. These links include social site and the third-party ticket purchasing site.
- 
 <h2>Issues discovered while testing and how they were rectified.</h2>
 <li>This site was tested across multiple browsers (Chrome, Microsorft Edge, FireFox) and on multiple mobile devices (iPhone 4, 5, 7, 8, X, iPad, iPad Pro, Galaxy S5, Pixel 2, and Pixel 2XL) to ensure compatibility and responsiveness.  </li>
 <li>For testing the responsive aspect of the website I used a Google Chrome Developer Tools</li>
+<li>Side nav - the mobile side nav was not functioning correctly. This was rectifies by using URL_for as the source</li>
+<li>Search box - there was a bug where I had incorrect defination resulting in the search_recipes page not displaying. I also had issues with searching for keyword in the recipe name. This was rectified with help from the toutors and my mentor. </li>
+<h3>Known Issues</h3>
+<li>presently not all keywords in the recipe_name are searchable</li>
+
 
 <h2>Validators
 </h2>
@@ -187,12 +173,6 @@ This website is currently viewable with no deployment issues in:
 <li>Google Chrome</li>
 <li>Microsorft Edge</li>
 <li>Safari</li>
-
-<h2> Bugs </h2>
-<li>...</li>
-<li>...</li>
-<li>...</li>
-<li>...</li>
 
 
 <h1>Depolyment</h1>
@@ -218,7 +198,7 @@ In order to deploy my project to Heroku I have completed the following steps, yo
 <ul>
 <li>I got the recipes and images from <a href="https://www.bbc.co.uk/food/recipes">BBC FOOD</a> </li>
 <li>I got the website template from <a href="https://www.bbc.co.uk/food/recipes">Materalize</a> </li>
-<li>I got the ...</li>
+<li>I got the the python from the Code institute lectures</li>
 </ul>
 
 
