@@ -6,28 +6,28 @@
             <h1 class="header center orange-text">Edit Recipe</h1>
 <!--Materialise form to imput recipes-->
             <div class="row">
-            <form action="{{ url_for('update_recipe', recipe_id=edit_recipe._id) }}" method="POST" class="col s12">
+            <form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="col s12">
                 <div class="row">
                     <div class="input-field center col s12">
-                    <input placeholder="What is your awesome recipe's cool name?" name="recipe_name" id="recipe_name" type="text" class="validate">
+                    <input value="{{ recipe.recipe_name }}" placeholder="What is your awesome recipe's cool name?" name="recipe_name" id="recipe_name" type="text" class="validate">
                     <label for="recipe_name">Recipe Name</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field center col s12">
-                    <input placeholder="Add recipre image url" id="recipe_image" name="recipe_image" type="text" class="validate">
+                    <input value="{{ recipe.recipe_image}}" placeholder="Add recipre image url" id="recipe_image" name="recipe_image" type="text" class="validate">
                     <label for="recipe_image">Add Image</label>
                     </div>
                 </div> 
                 <div class="row">
                     <div class="input-field center col s12">
-                    <input placeholder="1 hour 30 minutes" id="recipe_cook_time" name="recipe_cook_time" type="text" class="validate">
+                    <input value="{{ recipe.recipe_cook_time}}" placeholder="1 hour 30 minutes" id="recipe_cook_time" name="recipe_cook_time" type="text" class="validate">
                     <label for="recipe_cook_time">Cooking Time</label>
                     </div>
                 </div> 
                 <div class="row">
                     <div class="input-field center col s12">
-                    <input placeholder="How many mouths will this feed?" id="recipe_servings" name="recipe_servings" type="text" class="validate">
+                    <input value="{{ recipe.recipe_servings }}" placeholder="How many mouths will this feed?" id="recipe_servings" name="recipe_servings" type="text" class="validate">
                     <label for="recipe_servings">Servings</label>
                     </div>
                 </div>  
@@ -47,20 +47,20 @@
                 </div> -->
                 <div class="row">
                     <div class="input-field col s12">
-                    <input placeholder="List each Instruction - one per line" id="recipe_instructions" name="recipe_instructions" type="text" class="validate">
+                    <input value="{{ recipe.recipe_instructions }}" placeholder="List each Instruction - one per line" id="recipe_instructions" name="recipe_instructions" type="text" class="validate">
                     <label for="recipe_instructions">Recipe Instructions</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                    <input placeholder="List each Ingredient - one per line" id="recipe_ingredients" name="recipe_ingredients" type="text" class="validate">
+                    <input value="{{ recipe.recipe_ingredients }}" placeholder="List each Ingredient - one per line" id="recipe_ingredients" name="recipe_ingredients" type="text" class="validate">
                     <label for="recipe_ingredients">Ingredients</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
                         <select id="meal_type" name="meal_type_name">
-                        <option value="" disabled selected>Which Meal Of the Day</option>
+                        <option value="meal_type_name" disabled selected>Which Meal Of the Day</option>
                     {% for meal in meal_type %}
                         <option value="{{meal.meal_type_name}}">{{meal.meal_type_name}}</option>
                     {% endfor %}

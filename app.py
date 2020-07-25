@@ -75,10 +75,10 @@ def recipe_display(recipe_id):
 
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipe_id):
-    edit_recipe = mongo.db.all_recipes.find_one({"_id": ObjectId(recipe_id)})
+    recipe = mongo.db.all_recipes.find_one({"_id": ObjectId(recipe_id)})
     meal_type = mongo.db.meal_type.find()
     categories = mongo.db.categories.find()
-    return render_template('edit_recipe.html', edit_recipe=edit_recipe,
+    return render_template('edit_recipe.html', recipe=recipe,
                            categories=categories,
                            meal_type=meal_type)
 
