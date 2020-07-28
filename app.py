@@ -27,6 +27,7 @@ def get_recipes():
 
 ''' Search Recipe'''
 
+
 @app.route('/search', methods=['GET', 'POST'])
 def search():
     print("search")    
@@ -35,13 +36,14 @@ def search():
     return render_template('search_recipes.html', recipes=recipes)
 
 
-
 @app.route('/search_recipes', methods=['GET', 'POST'])
 def search_recipes():
 
-    return render_template('search_recipes.html', recipes=mongo.db.all_recipes.find())
+    return render_template('search_recipes.html', 
+    recipes=mongo.db.all_recipes.find())
 
 '''Add recipe'''
+
 
 @app.route('/add_recipe')
 def add_recipe():
@@ -49,13 +51,16 @@ def add_recipe():
                            categories=mongo.db.categories.find(),
                            meal_type=mongo.db.meal_type.find())
 
+
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
     all_recipes = mongo.db.all_recipes
     all_recipes.insert_one(request.form.to_dict())
     return redirect(url_for('get_recipes'))
 
+
 '''login'''
+
 
 @app.route('/login')
 def login():
@@ -64,14 +69,15 @@ def login():
 
 '''shows the recipe on a blog page of its own.'''
 
+
 @app.route('/recipe_page/<recipe_id>')
 def recipe_display(recipe_id):
-    recipe = mongo.db.all_recipes.find_one({'_id': ObjectId(recipe_id)})
-    
+    recipe = mongo.db.all_recipes.find_one({'_id': ObjectId(recipe_id)})    
     return render_template('recipe_page.html', recipe=recipe)
 
 
-''' Edit recipe  NEED TO BUILD UPDATE_RECIPE'''
+''' Edit recipe '''
+
 
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipe_id):
@@ -82,29 +88,30 @@ def edit_recipe(recipe_id):
                            categories=categories,
                            meal_type=meal_type)
 
+
 @app.route('/update_recipe/<recipe_id>', methods=['POST'])
 def update_recipe(recipe_id):
     all_recipes = mongo.db.all_recipes
     all_recipes.update({'_id': ObjectId(recipe_id)},
-    {
-        'recipe_name':request.form.get('recipe_name'),
-        'recipe_cook_time':request.form.get('recipe_cook_time'),
-        'recipe_instructions': request.form.get('recipe_instructions'),
-        'recipe_servings': request.form.get('recipe_servings'),
-        'recipe_ingredients': request.form.get('recipe_ingredients'),
-        'recipe_image': request.form.get('recipe_image'),
-        'is_vegetarian':request.form.get('is_vegetarian')
-    })
+        {
+            'recipe_name': request.form.get('recipe_name'),
+            'recipe_cook_time': request.form.get('recipe_cook_time'),
+            'recipe_instructions': request.form.get('recipe_instructions'),
+            'recipe_servings': request.form.get('recipe_servings'),
+            'recipe_ingredients': request.form.get('recipe_ingredients'),
+            'recipe_image': request.form.get('recipe_image'),
+            'is_vegetarian': request.form.get('is_vegetarian')
+        })
     return redirect(url_for('get_recipes'))
-    
+
+
 @app.route('/delete_recipe/<recipe_id>')
 def delete_recipe(recipe_id):
     mongo.db.all_recipes.remove({'_id': ObjectId(recipe_id)})
     return redirect(url_for('get_recipes'))
 
 
-#--------------------------------- Categories ------------------------------
-
+# --------------------------------- Categories ------------------------------
 
 
 @app.route('/get_categories')
