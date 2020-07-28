@@ -8,36 +8,30 @@
                 <h5 class="header col s12 light">Making food simple by sharing tastes</h5>
             </div>
             <div class="row center">
-                <a href="/login" id="download-button" class="btn-large waves-effect waves-light orange">Login</a>
-                <a href="/login" id="download-button" class="btn-large waves-effect waves-light orange">Register</a>
+                <a href="/login" class="btn-large waves-effect waves-light orange">Login</a>
+                <a href="/login" class="btn-large waves-effect waves-light orange">Register</a>
             </div>
             <div class="row center">
-                <a href="/add_recipe" id="download-button" class="btn-large waves-effect waves-light orange">Add Recipes</a>
+                <a href="/add_recipe" class="btn-large waves-effect waves-light orange">Add Recipes</a>
             </div>
-    
             <br><br>
-            
             <div class="row center">
             <h2 class="center light-blue-text">Latest Recipes</h2>
             {% for recipe in all_recipes %}
                 <div class="col s12 m4">
                     <div class="icon-block">
                      <!-- Recipe Image -->
-                        <img src="{{recipe.recipe_image}}"class="" class="materialboxed" width="100%" height="33%" alt="{{recipe.recipe_name}}">
+                        <img src="{{recipe.recipe_image}}" class="materialboxed" width="100%" height="165px" alt="{{recipe.recipe_name}}">
                      <!-- Recipe INTRO -->
                         <h5 class="center">{{ recipe.recipe_name }}</h5>
                         <h6 class="center"><i class="fas fa-clock"></i>{{ recipe.recipe_cook_time }}</h6>
                         <h6 class="center"><i class="fas fa-utensils"></i> {{ recipe.recipe_servings }}</h6>
                         <!--Full Recipe View Button -->
                         <a href="{{url_for('recipe_display', recipe_id=recipe._id)}}" class="btn waves-effect waves-light orange">View Full Recipe</a>
-                        <!-- <p class="light">{{ recipe.recipe_instructions }}</p>
-                        <p class="light">{{ recipe.recipe_ingredients }}</p> -->
                     </div>
                 </div>
             {% endfor %}
             </div>    
         </div>
     </div>
-    
-    
 {% endblock %}
