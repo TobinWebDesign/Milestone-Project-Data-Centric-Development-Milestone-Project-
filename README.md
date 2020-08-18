@@ -1,12 +1,81 @@
-<h1>Practical Python and Data-Centric Development Milestone Project
-</h1>
+# Practical Python and Data-Centric Development Milestone Project
+***
 
-<h2>Project Summary</h2>
-<p>Recipify - Recipe sharing app. The purpose is to build a full-stack site that allows users to manage a common dataset about a particular domain that allows users to create, locate, read, update and delete (CRUD) recipes. Recipify gives access to all the recipes in the database to all users. All users can add new recipes as well as edit, locate, and delete other recipes.
-</p>
-<p>
+## Table of Contents:
+* [Project Summery ](#project-summery)
+* [Functionality of Project](#functionality-of-project)
+* [User Experience](#user-experience)
+    * [User Stories](#user-stories)
+    * [Design](#design)
+        * [1. Font](#1-font)
+        * [2. Color Scheme](#2-color-scheme)
+        * [3. Template](#3-template)
+        * [4. Wireframing](#4-wireframing)
+* [Technology Used](#technology-used)
+* [Features](#features)
+    * [Future Features](#future-features)
+* [Testing](#testing)
+    * [Defensive Design](#defensive-design)
+* [Deployment](#deployment)
+* [Credits](#credits)
+    * [Special Thanks & Acknowledgements](#special-thanks--acknowledgements)
+
+***
+
+## Welcome to Recipify 
+
+## Project Summary
+Recipify - Recipe sharing app. The purpose is to build a full-stack site that allows users to manage a common dataset about a particular domain that allows users to create, locate, read, update and delete (CRUD) recipes. Recipify gives access to all the recipes in the database to all users. All users can add new recipes as well as edit, locate, and delete other recipes.
+
+
 The project can be viewed <a href="https://recipify-food-app.herokuapp.com/">here</a>
-</p>
+
+
+### Functionality of Project
+This application contains the key CRUD requirement functionality and utilises a data handling document based database, MongoDB. The user functionality is created using Flask, HTML templates and CSS. One of the most prominent frontend frameworks was used in building the frontend interface structure, Bootstrap, and includes all the main attributable points of a modern day website/application such as a Navigation bar and Footer elements.
+
+The project is version controlled via Git & Github and is deployed via Heroku. All environment variables are held in a git ignored file and held _secret_ to ensure the project integrity is held to present day and project requirement standards.
+
+[Back to top](#table-of-contents)
+
+## User Experience:
+
+#### User Stories:
+_Generic (Guest/Public) User:_
+* As a Generic User, I want to view all recipes.
+* As a Generic User, I want to add recipes.
+* As a Generic User, I want to edit recipes.
+* As a Generic User, I want to delete recipes.
+* As a Generic User, I want to search recipes.
+* As a Generic User, I want to navigate the app easily.
+
+#### Design
+
+##### 1. Font
+The project has a main font <a href="https://fonts.google.com/specimen/Roboto">Roboto</a> which greatly complement each other throughout the site.
+  
+“Sans-Serif” is used as the default backup font in cases where these fonts have difficulty loading.
+Maven Pro sports a unique curvature allowing it the ability to stand out and be distinguishable when in context. It is used throughout the site as the main font for headers, unique stand-out pieces of information and button text etc, drawing the user’s attention to these main focus points and calls to actions.
+
+The secondary font used is Roboto. With its natural widths per character, and increased effectiveness for reading rhythm, it was the perfect choice using this font for the lengthier text elements. Used on all major paragraphs, it offers a pleasing reading ability to the user and is easy on the eyes. This font is a staple used in many websites and applications today worldwide and is reminiscent of how an application should look, clean, professional and very readable amongst all major languages.
+
+##### 2. Color Scheme
+This project went through multiple theme iterations whilst in Wireframe stage. Ultimately, I was always lead back to professional high contrast finish that would normally be seen in most day-to-day apps with a touch of pastel color to highlight to the user the breakaway elements.
+
+* ![#ffffff](https://placehold.it/15/ffffff/000000?text=+) `#ffffff` - Primary color
+* ![#03a9f4](https://placehold.it/15/03a9f4/000000?text=+) `#03a9f4` - Secondary color
+* ![#ff9800](https://placehold.it/15/ff9800/000000?text=+) `#ff9800` - Tertiary color
+
+The background colour and the heading in font in the navbar and call to action buttons used the primary colour, ![#ffffff](https://placehold.it/15/ffffff/000000?text=+) , setting the immediate tone for the rest of the application to be professional and aesthetically pleasing. All fonts used throughout the application utilise this primary color as-well.
+
+The navbar is colored in our Secondary color choice, ![#03a9f4](https://placehold.it/15/03a9f4/000000?text=+) , which offered the first splash of vibrant color to contrast the logo and the nav-link elements.
+
+The call to action buttons utilised , ![#ff9800](https://placehold.it/15/ff9800/000000?text=+) , when not active, focused or hovered. 
+
+The tertiary color, ![#ff9800](https://placehold.it/15/ff9800/000000?text=+) , was also used on the icons and H1 headings.
+
+##### 3 Template
+The app was created uasing the <a href="https://materializecss.com/getting-started.html">Materialize starter template</a> to reduce setup up time
 
 <h2>Wireframes</h2>
 <p>I've used AdobeXD to create my wireframe / mock-up. All my wireframes can be found in the following link
