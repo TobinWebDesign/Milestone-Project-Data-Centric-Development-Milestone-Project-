@@ -349,8 +349,8 @@ To clone the repository:
 * Click on the "Clone or download" green button located above and to the right of the File Structure table.
 * Click on the "clipboard icon" to the right of the Git URL to copy the web URL of the Clone.
 * Open yourthe Gitpod (IDE) and navigate to the terminal window.
-* Change the directory to where you want to clone the repository too. (In the case of PyCharm the directory path can be found through the "Navigate" tab).
-* Paste the Git URL copied from above and click "Ok". (Again in the case of PyCharm once you click "clone", Git Root mapping will be automatically set to the project Root directory).
+* Change the directory to where you want to clone the repository too.
+* Paste the Git URL copied from above and click "Ok".
 
 [Back to Top](#table-of-contents)
 
