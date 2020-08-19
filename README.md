@@ -115,6 +115,76 @@ Below the Latest Recipes are desplayed.
 
 ***
 
+* Login Page:
+
+STILL IN PRODUCTION
+A simple page as normal inheriting the navbar and footer from the base.html file.
+
+<details>
+<summary>Login Wireframes</summary>
+
+<p align="center">
+    <img height="350" src="https://github.com/TobinWebDesign/Milestone-Project-Data-Centric-Development-Milestone-Project-/blob/master/wireframes/mobile%20login%20page.png" alt="Login page mobile wireframe">
+</p>
+
+<p align="center">
+<img height="350" src="https://github.com/TobinWebDesign/Milestone-Project-Data-Centric-Development-Milestone-Project-/blob/master/wireframes/Desktop%20login%20page.png" alt="Login page tablet-desktop wireframe">
+</p>
+</details>
+
+***
+
+* Create Recipe Page:
+
+
+<details>
+<summary>Create Recipe Wireframes</summary>
+
+<p align="center">
+    <img height="350" src="" alt="Create Recipe page mobile wireframe">
+</p>
+
+<p align="center">
+<img height="350" src=" " alt="Create Recipe page tablet-desktop wireframe">
+</p>
+</details>
+
+***
+
+* Search Recipe Page:
+
+
+<details>
+<summary>Search Recipe Wireframes</summary>
+
+<p align="center">
+    <img height="350" src="https://github.com/TobinWebDesign/Milestone-Project-Data-Centric-Development-Milestone-Project-/blob/master/wireframes/Desktop%20search%20recipe%20page.png" alt="Create Recipe page mobile wireframe">
+</p>
+
+<p align="center">
+<img height="350" src="https://github.com/TobinWebDesign/Milestone-Project-Data-Centric-Development-Milestone-Project-/blob/master/wireframes/Desktop%20search%20recipe%20page.png" alt="Create Recipe page tablet-desktop wireframe">
+</p>
+</details>
+
+***
+
+* Recipe Page:
+
+
+<details>
+<summary>Recipe Wireframes</summary>
+
+<p align="center">
+    <img height="350" src="https://github.com/TobinWebDesign/Milestone-Project-Data-Centric-Development-Milestone-Project-/blob/master/wireframes/mobile%20recipe%20page.png" alt="Create Recipe page mobile wireframe">
+</p>
+
+<p align="center">
+<img height="350" src="https://github.com/TobinWebDesign/Milestone-Project-Data-Centric-Development-Milestone-Project-/blob/master/wireframes/Desktop%20recipe%20page.png" alt="Create Recipe page tablet-desktop wireframe">
+</p>
+</details>
+
+***
+
 ##### 6. UX
 
 My main goal in UX was to build a responsive website that is simple to use. The users can create their own recipes, view all the recipes created on the database, edit and delete all recipes. The target audience for this app is anyone who has passion for cooking, wants to discover new recipes or needs to store their own recipes online.
