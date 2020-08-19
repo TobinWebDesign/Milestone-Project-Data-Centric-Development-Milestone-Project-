@@ -17,7 +17,6 @@
 * [Features](#features)
     * [Future Features](#future-features)
 * [Testing](#testing)
-    * [Defensive Design](#defensive-design)
 * [Deployment](#deployment)
 * [Credits](#credits)
     * [Special Thanks & Acknowledgements](#special-thanks--acknowledgements)
