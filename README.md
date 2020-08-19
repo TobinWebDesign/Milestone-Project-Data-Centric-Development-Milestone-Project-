@@ -191,146 +191,128 @@ My main goal in UX was to build a responsive website that is simple to use. The 
 Creating a modern and user-friendly interface with easy access to all information is the key to giving users a feeling of reliability and positiveness. I developed this app in a way that everyone can view and edit all the recipes on the website. The next phase of the project would be to only authors make changes to their recipes.
 The structure of the website is well-organised and easy navigation.
 
+[Back to Top](#table-of-contents)
 
+## Technology Used
 
-<h2>User Stories </h2>
-<ul>
-  <li>As a user, I want/expect:
-</li>
-<li>find good recipes</li>
-<li>to view all the recipes without having to register</li>
-<li>to add new recipes
-</li>
-<li>to edit recipes</li>
-<li>to delete my recipes</li>
-<li>to search for recipes
-</li>
-<li>to use the website from any device (laptop, tablet, mobile)
-</li>
-</ul>
+#### Languages, Frameworks, Editors & Version Control:
 
-<h1> Features</h1>
+* HTML, CSS & Python ~ core languages used to create this multi-page CRUD application.
+* <a href="https://materializecss.com/"> Materalize</a> ~ Used as the core structuring layout for the application, ensuring mobile-first design and screen size fluidity.
+* <a href="https://git-scm.com/">Git</a> ~ Installed on local device and integrated to PyCharm as a Plugin to enable version controlling.
+* <a href="https://github.com/tobinwebdesign/">Github</a> ~ Used to host the repository of all previous versions of the build and linked to Heroku to push the latest changes to the deployed build version held there.
+* <a href="https://www.heroku.com/">Heroku</a> ~ A cloud platform as a service enabling deployment for this CRUD application.
 
-<h2>Existing Features</h2>
+## Technologies Used
+### <a href="https://github.com/">GitHub</a>
 
-<li>If user wants to search recipes for a particular it can be done by putting in a keyword that is in a Recipe Title into the search box
-Add a Recipe ([CRUD] Create or 'add' a new recipe)</li>
-<li>All users can add recipes.User name will automatically populate in the add recipe form as Recipe Author.For selective fields,user can select the options from drop down.All the fields of the form is well explained with the 'placeholder' to make it user friendly.
-Viewing Recipes ([CRUD] Read or 'review' recipes)</li>
-<li>On the recipes page, all recipes are displayed. If user wants to see a particular recipe,the recipe will open in a full screen where all the details of the recipe can be found.
-Update a Recipe ([CRUD] Update recipes)</li>
-<li>Users can update or 'edit' recipes on Edit page.</li>
-<li>Delete a Recipe ([CRUD] Delete recipes)</li>
-<li>Users can delete or 'remove' recipes. Delete option will only be visible for a user on their own recipe pages.</li>
+* Used as remote storage of my code online.
+* <a href="https://pip.pypa.io/en/stable/installing/">PIP</a>
+* for installation of necessary tools.
 
-<h2>Features Left to Implement</h2>
-<li>Register User allowing anybody can register for free.
-</li>
-<li>Log in and log out features
-</li>
-<li>Delete option that will only be visible for a user on their own recipe pages.</li>
-<li>Edit option that will only be visible for a user on their own recipe pages.
-</li>
-<li>Search Button,more filters to make recipes more easily accessible.</li>
-<li>Page view counter for recipe pages</li>
-<li>Like buttons on recipes
-</li>
-<li>Social share buttons</li>
-<li>Comments section</li>
+## Front-End Technologies
+### <a href="https://jquery.com/">JQuery</a>
+* The project uses JQuery to simplify DOM manipulation.
+### <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Javascript</a>
+* I used JavaScript from the Google Maps API website and for the reset button
+### <a href="https://en.wikipedia.org/wiki/HTML5">HTML5</a>
+* HTML5 was used for the semantic structure and presenting the content of the webpage.
+### <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3">CSS3</a>
+* CSS3 was used for the styling of the content to produce an aesthetically pleasing viewing experience.
+### <a href="https://materializecss.com/">Materialize</a>
+* Used as the design framework.
+## Back-End Technologies
 
-<h1>Technologies Used</h1>
-<h3><a href="https://github.com/">GitHub</a></h3>
-<li>Used as remote storage of my code online.
-</li>
-<h3><a href="https://pip.pypa.io/en/stable/installing/">PIP</a></h3>
-<li>for installation of necessary tools.
-</li>
-<h1>Front-End Technologies</h1>
-<h3><a href="https://jquery.com/">JQuery</a></h3>
-<li>The project uses JQuery to simplify DOM manipulation.</li>
-<h3><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Javascript</a></h3>
-<li>I used JavaScript from the Google Maps API website and for the reset button</li>
-<h3><a href="https://en.wikipedia.org/wiki/HTML5">HTML5</h3></a>
-<li>HTML5 was used for the semantic structure and presenting the content of the webpage.</li>
-<h3><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3">CSS3</h3></a>
-<li>CSS3 was used for the styling of the content to produce an aesthetically pleasing viewing experience.</li>
-<h3><a href="https://materializecss.com/">Materialize</h3></a>
-<li>Used as the design framework.</li>
-<h1>Back-End Technologies
-</h1>
-<h3><a href="https://www.python.org/">Python</h3></a>
-<li>back-end programming language used in this project.</li>
-<h3><a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</h3></a>
-<li>microframework for building and rendering pages.</li>
-<h3><a href="https://www.mongodb.com/">MongoDB Atlas</h3></a>
-<li>NoSQL database for storing back-end data.</li>
-<h3><a href="https://api.mongodb.com/python/current/">PyMongo</h3></a>
-<li>for Python to get access the MongoDB database.</li>
-<h3><a href="https://werkzeug.palletsprojects.com/en/0.16.x/">Werkzeug</h3></a>
-<li>to generate and verify password hashing.</li>
-<h3><a href="https://jinja.palletsprojects.com/en/2.10.x/">Jinja</h3></a>
-<li>templating language for Python, to display back-end data in HTML.</li>
-<h3><a href="https://heroku.com/">Heroku</h3></a>
-<li>to host the project.</li>
+### <a href="https://www.python.org/">Python</a>
+* back-end programming language used in this project.
+### <a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a>
+* microframework for building and rendering pages.
+### <a href="https://www.mongodb.com/">MongoDB Atlas</a>
+* NoSQL database for storing back-end data.
+### <a href="https://api.mongodb.com/python/current/">PyMongo</a>
+* for Python to get access the MongoDB database.
+### <a href="https://werkzeug.palletsprojects.com/en/0.16.x/">Werkzeug</a>
+* to generate and verify password hashing.
+### <a href="https://jinja.palletsprojects.com/en/2.10.x/">Jinja</a>
+* templating language for Python, to display back-end data in HTML.
+### <a href="https://heroku.com/">Heroku</a>
+* to host the project.
 
-<h1>Libraries
-</h1>
-<h3><a href="https://fontawesome.com/">Font Awesome</h3></a>
-<li>Font Awesome was used for the social links, mainly the social media icons for a professional finish.</li>
-<h3><a href="https://fonts.google.com/">Google Fonts</h3></a>
-<li>I used Google Fonts for the font families.</li>
+## Libraries
 
+### <a href="https://fontawesome.com/">Font Awesome</a>
+* Font Awesome was used for the social links, mainly the social media icons for a professional finish.
+### <a href="https://fonts.google.com/">Google Fonts</a>
+* I used Google Fonts for the font families.
 
-<h1>Testing</h1>
+##  Features
+
+### Existing Features
+
+* If user wants to search recipes for a particular it can be done by putting in a keyword that is in a Recipe Title into the search box
+Add a Recipe ([CRUD] Create or 'add' a new recipe)
+* All users can add recipes.User name will automatically populate in the add recipe form as Recipe Author.For selective fields,user can select the options from drop down.All the fields of the form is well explained with the 'placeholder' to make it user friendly.
+Viewing Recipes ([CRUD] Read or 'review' recipes)
+* On the recipes page, all recipes are displayed. If user wants to see a particular recipe,the recipe will open in a full screen where all the details of the recipe can be found.
+Update a Recipe ([CRUD] Update recipes)
+* Users can update or 'edit' recipes on Edit page.
+* Delete a Recipe ([CRUD] Delete recipes)
+* Users can delete or 'remove' recipes. Delete option will only be visible for a user on their own recipe pages.
+
+### Features Left to Implement
+* Register User allowing anybody can register for free.
+* Log in and log out features
+* Delete option that will only be visible for a user on their own recipe pages.
+* Edit option that will only be visible for a user on their own recipe pages.
+* Search Button,more filters to make recipes more easily accessible.
+* Page view counter for recipe pages
+* Like buttons on recipes
+* Social share buttons
+* Comments section
+
+## Testing
 
 Testing was performed in 3 different ways.
 - Browser Testing
 - User testing
 - Manual Testing
 
-<h3>Browser Testing</h3>
+### Browser Testing
 While my main choice of browser for development is google chrome, I regularly checked the performance on the Microsoft Edge and Safari browsers. Making use of browser resizing and dev tools device toolbars on each browser to test responsiveness and how the grid, fonts and media queries were performing and the consistency between each. Adjusting to find a happy medium for all three.
 After I had test deployed the site to heroku I was able to see the real life versions which I was able to test on android and iphone phone.
 Known Issue
-<li>Mobile nav animation</li>
+* Mobile nav animation
 
-<h3>User testing
-</h3>
-….
+### Manual Testing
 
-<li>...</li>
-
-<h3>Manual Testing
-</h3>
 View | Add | Edit | Delete | Search
-<h4>All recipes and single recipe display
-</h4>
-<li>...</li>
-<h4>Add New Recipe
-</h4>
-<li>I added plenty of test recipes to check the functionality throughout the development. If I leave some of the required fields empty, I will not be able to submit the form. </li>
-</li>
-<h4>Edit Recipe
-</h4>
-<li>Edit recipe button is visible on the recipe page. Once clicked it opens a page with a form that allows the user to edit the recipe. </li>
-<h4>Delete Recipe
-</h4>
-<li>Delete button is visible  on the recipe page.  Once clicked it deletes the recipe from the database</li>
-<h4>Search Recipe
-</h4>
-<li>The search box is visible on all pages and allows users search keywords in the recipe title. </li>
+#### All recipes and single recipe display
 
-<h2>Issues discovered while testing and how they were rectified.</h2>
-<li>This site was tested across multiple browsers (Chrome, Microsorft Edge, FireFox) and on multiple mobile devices (iPhone 4, 5, 7, 8, X, iPad, iPad Pro, Galaxy S5, Pixel 2, and Pixel 2XL) to ensure compatibility and responsiveness.  </li>
-<li>For testing the responsive aspect of the website I used a Google Chrome Developer Tools</li>
-<li>Side nav - the mobile side nav was not functioning correctly. This was rectifies by using URL_for as the source</li>
-<li>Search box - there was a bug where I had incorrect defination resulting in the search_recipes page not displaying. I also had issues with searching for keyword in the recipe name. This was rectified with help from the toutors and my mentor. </li>
-<h3>Known Issues</h3>
-<li>presently not all keywords in the recipe_name are searchable</li>
+#### Add New Recipe
+
+* I added plenty of test recipes to check the functionality throughout the development. If I leave some of the required fields empty, I will not be able to submit the form. 
+
+#### Edit Recipe
+
+* Edit recipe button is visible on the recipe page. Once clicked it opens a page with a form that allows the user to edit the recipe. 
+#### Delete Recipe
+
+* Delete button is visible on the recipe page.  Once clicked it deletes the recipe from the database
+#### Search Recipe
+
+* The search box is visible on all pages and allows users search keywords in the recipe title. 
+
+### Issues discovered while testing and how they were rectified.
+* This site was tested across multiple browsers (Chrome, Microsorft Edge, FireFox) and on multiple mobile devices (iPhone 4, 5, 7, 8, X, iPad, iPad Pro, Galaxy S5, Pixel 2, and Pixel 2XL) to ensure compatibility and responsiveness.  
+* For testing the responsive aspect of the website I used a Google Chrome Developer Tools
+* Side nav - the mobile side nav was not functioning correctly. This was rectifies by using URL_for as the source
+* Search box - there was a bug where I had incorrect defination resulting in the search_recipes page not displaying. I also had issues with searching for keyword in the recipe name. This was rectified with help from the toutors and my mentor. 
+### Known Issues
+* The search box works effectively for words found in the recipe titles it is upper and lowercase sensitive sometimes resulting in no resipies being found. 
 
 
-<h2>Validators
-</h2>
+### Validators
+
 HTML -
 <a href="https://validator.w3.org/nu/#textarea">W3C HTML Validator</a>
 CSS -
@@ -342,38 +324,50 @@ Python
 
 
 This website is currently viewable with no deployment issues in:
-<li>Google Chrome</li>
-<li>Microsorft Edge</li>
-<li>Safari</li>
+* Google Chrome
+* Microsorft Edge
+* Safari
 
 
-<h1>Depolyment</h1>
-<h3>Deployment to Heroku
-</h3>
+## Deployment
+
+This multi-page application was developed in Gitpod and version controlling was utilised via local (git) and online (github) repository technologies. 
+
 In order to deploy my project to Heroku I have completed the following steps, you can view it <a href="https://recipify-food-app.herokuapp.com/">here</a>.
-<li>Created a Procfile with the command echo web: python run.py > Procfile.</li>
-<li>Created a requirement.txt file so Heroku know what python modules it will need to run my application with the command pip freeze > requirements.txt
-</li>
-<li>Created a new branch to test deployment to heroku changing MONGO_URI from local to mongo atlas, changed app.run() to set debug to False.
-</li>
-<li>Created a new project on heroku and in the deploy section linked my github repository with heroku in order to deploy straight from the source.
- </li>
-<li>Configured any environment variables in Heroku App Settings > Config Vars such as my Secret Key, IP PORT and MONGO_URI.
-</li>
-<li>Finalised all code, and made sure that it was production ready and ensured that my .gitignore was not uploading any secret keys.</li>
-<li>Deployed the application from heroku admin page using linked repository and master branch.
-</li>
-<li>The application is now fully deployed to Heroku
-</li>
 
-<h1>Credits</h1>
-<ul>
-<li>I got the recipes and images from <a href="https://www.bbc.co.uk/food/recipes">BBC FOOD</a> </li>
-<li>I got the website template from <a href="https://www.bbc.co.uk/food/recipes">Materalize</a> </li>
-<li>I got the the python from the Code institute lectures</li>
+Deploying this application was achieved by:
+* Created a Procfile with the command echo web: python run.py > Procfile.
+* Created a requirement.txt file so Heroku know what python modules it will need to run my application with the command pip freeze > requirements.txt
+* Created a new branch to test deployment to heroku changing MONGO_URI from local to mongo atlas, changed app.run() to set debug to False.
+* Created a new project on heroku and in the deploy section linked my github repository with heroku in order to deploy straight from the source.
+* Configured any environment variables in Heroku App Settings > Config Vars such as my Secret Key, IP PORT and MONGO_URI.
+* Finalised all code, and made sure that it was production ready and ensured that my .gitignore was not uploading any secret keys.
+* Deployed the application from heroku admin page using linked repository and master branch.
+* The application is now fully deployed to Heroku
+
+To clone the repository:
+* Select the Repository from the Github Dashboard.
+* Click on the "Clone or download" green button located above and to the right of the File Structure table.
+* Click on the "clipboard icon" to the right of the Git URL to copy the web URL of the Clone.
+* Open yourthe Gitpod (IDE) and navigate to the terminal window.
+* Change the directory to where you want to clone the repository too. (In the case of PyCharm the directory path can be found through the "Navigate" tab).
+* Paste the Git URL copied from above and click "Ok". (Again in the case of PyCharm once you click "clone", Git Root mapping will be automatically set to the project Root directory).
+
+[Back to Top](#table-of-contents)
+
+### Deployment to Heroku
+
+
+
+## Credits
+
+* I got the recipes and images from <a href="https://www.bbc.co.uk/food/recipes">BBC FOOD</a> 
+* I got the website template from <a href="https://materializecss.com/getting-started.html">Materalize</a> 
+* I got the python code from the Code institute lectures
+
 </ul>
 
 
-<h2>Acknowledgements</h2>
+## Acknowledgements
 
-<P>My thanks to my mentor Anthony Ngene also helped me out with python issues and the tutoring team at the Code Institute .  </P>
+My thanks to my mentor Anthony Ngene also helped me out with python issues and the tutoring team at the Code Institute. The tutor team support has been excellent.  
