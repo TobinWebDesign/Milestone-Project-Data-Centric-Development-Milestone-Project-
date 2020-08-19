@@ -5,7 +5,9 @@
  *
  * Made By MaterializeCSS.com
  */
- 
+.body   {
+    font-family: 'Roboto', sans-serif;
+} 
 .icon-block {
     display: flex;
     flex-direction: column;
