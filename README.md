@@ -10,7 +10,9 @@
         * [1. Font](#1-font)
         * [2. Color Scheme](#2-color-scheme)
         * [3. Template](#3-template)
-        * [4. Wireframing](#4-wireframing)
+        * [4. Geometry](#4-geometry)
+        * [5. Wireframing](#5-wireframing)
+        * [5. UX](#5-ux)
 * [Technology Used](#technology-used)
 * [Features](#features)
     * [Future Features](#future-features)
@@ -77,17 +79,48 @@ The tertiary color, ![#ff9800](https://placehold.it/15/ff9800/000000?text=+) , w
 ##### 3 Template
 The app was created uasing the <a href="https://materializecss.com/getting-started.html">Materialize starter template</a> to reduce setup up time
 
-<h2>Wireframes</h2>
-<p>I've used AdobeXD to create my wireframe / mock-up. All my wireframes can be found in the following link
-Initial Wireframes for the site: <a href="https://github.com/TobinWebDesign/Milestone-Project-Data-Centric-Development-Milestone-Project-/tree/master/wireframes">Wireframes</a>| 
+##### 4. Geometry
 
+The application is primarily rectangular shaped with subtle rounded edges around elements such as cards, forms and interactive buttons. On desktop the recipes are displayed in grids of three. On mobile the recipes are displayed in a single column.
+An example of this would be the Home page:
+* The Latest Recipes heading is vertically into thirds, each card contains a featured image, a title, preperation time snipet,  servings and a Call To Action.
+* Search recipies takes on a simular grid structure. 
+* There is a search bar built into the header that produces results on the Search Resipes page.
+* The Add Resipes page is a simple responsive form.
+
+##### 5. Wireframing
+
+Wireframing for this project were created using AdobeXD. Each page or view of the application was rendered as a wireframe in both Mobile and Desktop viewports to show the difference between the aesthetics and showing how the elements per page would react to differing viewport sizes. 
+
+Initial Wireframes for the site: <a href="https://github.com/TobinWebDesign/Milestone-Project-Data-Centric-Development-Milestone-Project-/tree/master/wireframes">Wireframes</a> 
+
+***
+
+* Home Page:
+
+The Home (Index) Page contained all the major navigation points for the user. It does not contain a hero image to maintain a clean and simple theme not destracting fromt the main focus of the app. A simple heading and subheading defining nature of the application as well as a choice of call to action buttons. 
+Below the Latest Recipes are desplayed. 
+
+<details>
+<summary>Home Wireframes</summary>
+
+<p align="center">
+    <img height="350" src="https://github.com/TobinWebDesign/Milestone-Project-Data-Centric-Development-Milestone-Project-/blob/master/wireframes/Mobile%20home%20page.png" alt="Home page mobile wireframe">
 </p>
-<h1>UX</h1>
 
-<p>My main goal in UX was to build a responsive website that is simple to use. The users can create their own recipes, view all the recipes created on the database, edit and delete all recipes. The target audience for this app is anyone who has passion for cooking, wants to discover new recipes or needs to store their own recipes online.
+<p align="center">
+<img height="350" src="https://github.com/TobinWebDesign/Milestone-Project-Data-Centric-Development-Milestone-Project-/blob/master/wireframes/Desktop%20homepage.png" alt="Home page tablet-desktop wireframe">
+</p>
+</details>
+
+***
+
+##### 6. UX
+
+My main goal in UX was to build a responsive website that is simple to use. The users can create their own recipes, view all the recipes created on the database, edit and delete all recipes. The target audience for this app is anyone who has passion for cooking, wants to discover new recipes or needs to store their own recipes online.
 Creating a modern and user-friendly interface with easy access to all information is the key to giving users a feeling of reliability and positiveness. I developed this app in a way that everyone can view and edit all the recipes on the website. The next phase of the project would be to only authors make changes to their recipes.
 The structure of the website is well-organised and easy navigation.
-</p>
+
 
 
 <h2>User Stories </h2>
