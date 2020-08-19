@@ -204,10 +204,13 @@ The structure of the website is well-organised and easy navigation.
 
 ## Technologies Used
 ### <a href="https://github.com/">GitHub</a>
-
 * Used as remote storage of my code online.
-* <a href="https://pip.pypa.io/en/stable/installing/">PIP</a>
+
+### <a href="https://pip.pypa.io/en/stable/installing/">PIP</a>
 * for installation of necessary tools.
+
+### <a href="http://gitpod.io/">Gitpod</a>
+* is the IDE used for developing this project.
 
 ## Front-End Technologies
 ### <a href="https://jquery.com/">JQuery</a>
