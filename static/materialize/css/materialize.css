@@ -6037,9 +6037,11 @@ body.keyboard-focused .dropdown-content li:focus {
 }
 
 .materialboxed {
+/* edited to make the images fit the 3x grid */
   object-fit: cover;  
   width: 100%;
   height: 165px;
+  /* materalise css */
   display: block;
   cursor: -webkit-zoom-in;
   cursor: zoom-in;
