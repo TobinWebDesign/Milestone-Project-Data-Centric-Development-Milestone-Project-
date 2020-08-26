@@ -120,6 +120,19 @@ def get_categories():
     categories=mongo.db.categories.find())
 
 
+# --------------------------------- 404 & 500 errors------------------------------
+
+@app.errorhandler(404)
+def response_404(exception):
+    """When 404 is captured this will display a 404 pagee"""
+    return render_template('404.html', exception=exception)
+
+
+@app.errorhandler(500)
+def response_500(exception):
+    """When 500 is captured this will display a 500 pagee"""
+    return render_template('500.html', exception=exception)
+
 if __name__ == "__main__":
     app.run(host=os.getenv("IP", "0.0.0.0"),
     port=int(os.getenv("PORT", 5000)),
