@@ -6037,6 +6037,9 @@ body.keyboard-focused .dropdown-content li:focus {
 }
 
 .materialboxed {
+  object-fit: cover;  
+  width: 100%;
+  height: 165px;
   display: block;
   cursor: -webkit-zoom-in;
   cursor: zoom-in;
