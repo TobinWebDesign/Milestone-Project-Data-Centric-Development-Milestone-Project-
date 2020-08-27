@@ -22,7 +22,9 @@ mongo = PyMongo(app)
 def get_recipes():
     all_recipes = mongo.db.all_recipes.find()
     print(all_recipes) 
-    return render_template("allrecipes.html", all_recipes=all_recipes)
+    return render_template("allrecipes.html",
+                            title='All Recipes',
+                            all_recipes=all_recipes)
 
 
 ''' Search Recipe'''
@@ -33,14 +35,17 @@ def search():
     print("search")    
     keywords = request.form.get('search')
     recipes = list(mongo.db.all_recipes.find({"recipe_name": {"$regex": f'.{keywords}.'}}))
-    return render_template('search_recipes.html', recipes=recipes)
+    return render_template('search_recipes.html',
+                            title='Search Recipes',
+                            recipes=recipes)
 
 
 @app.route('/search_recipes', methods=['GET', 'POST'])
 def search_recipes():
 
-    return render_template('search_recipes.html', 
-    recipes=mongo.db.all_recipes.find())
+    return render_template('search_recipes.html',
+                            title='Search Recipes',
+                            recipes=mongo.db.all_recipes.find())
 
 '''Add recipe'''
 
@@ -48,8 +53,9 @@ def search_recipes():
 @app.route('/add_recipe')
 def add_recipe():
     return render_template('add_recipe.html',
-                           categories=mongo.db.categories.find(),
-                           meal_type=mongo.db.meal_type.find())
+                            title='Add Recipes',
+                            categories=mongo.db.categories.find(),
+                            meal_type=mongo.db.meal_type.find())
 
 
 @app.route('/insert_recipe', methods=['POST'])
@@ -73,7 +79,9 @@ def login():
 @app.route('/recipe_page/<recipe_id>')
 def recipe_display(recipe_id):
     recipe = mongo.db.all_recipes.find_one({'_id': ObjectId(recipe_id)})    
-    return render_template('recipe_page.html', recipe=recipe)
+    return render_template('recipe_page.html', 
+                            title= 'Recipes',
+                            recipe=recipe)
 
 
 ''' Edit recipe '''
@@ -84,9 +92,11 @@ def edit_recipe(recipe_id):
     recipe = mongo.db.all_recipes.find_one({"_id": ObjectId(recipe_id)})
     meal_type = mongo.db.meal_type.find()
     categories = mongo.db.categories.find()
-    return render_template('edit_recipe.html', recipe=recipe,
-                           categories=categories,
-                           meal_type=meal_type)
+    return render_template('edit_recipe.html', 
+                            title= 'Edit Recipe',
+                            recipe=recipe,
+                            categories=categories,
+                            meal_type=meal_type)
 
 
 @app.route('/update_recipe/<recipe_id>', methods=['POST'])
@@ -125,13 +135,17 @@ def get_categories():
 @app.errorhandler(404)
 def response_404(exception):
     """When 404 is captured this will display a 404 pagee"""
-    return render_template('404.html', exception=exception)
+    return render_template('404.html', 
+                            title= '404',
+                            exception=exception)
 
 
 @app.errorhandler(500)
 def response_500(exception):
     """When 500 is captured this will display a 500 pagee"""
-    return render_template('500.html', exception=exception)
+    return render_template('500.html', 
+                            title= '500',
+                            exception=exception)
 
 if __name__ == "__main__":
     app.run(host=os.getenv("IP", "0.0.0.0"),

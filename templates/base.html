@@ -3,7 +3,12 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-    <title>Welcome to Recipify</title>
+    <!-- Customised Title for every page-->
+    {% if title %}
+    <title>Recipify - {{ title }}</title>
+    {% else %}
+    <title>Recipify</title>
+    {% endif %}
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{url_for('static', filename='images/favicon.png')}}" type="image/x-icon">
     <!-- CSS  -->
