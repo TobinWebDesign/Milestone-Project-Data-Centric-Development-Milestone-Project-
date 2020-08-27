@@ -30,21 +30,7 @@
                     <input value="{{ recipe.recipe_servings }}" placeholder="How many mouths will this feed?" id="recipe_servings" name="recipe_servings" type="text" class="validate">
                     <label for="recipe_servings">Servings</label>
                     </div>
-                </div>  
-                <!-- <div class="row">
-                    <div class="input-field col s12">
-                    <select id="recipe_servings"  class="validate">
-                        <option value="" disabled selected>Choose your option</option>
-                        <option value="1">1-2</option>
-                        <option value="2">2-4</option>
-                        <option value="3">5-7</option>
-                        <option value="4">8-10</option>
-                    </select>
-                    <input id="recipe_servings" type="range" class="validate" min="0" max="10" />
-                    <br>
-                    <label for="recipe_servings">Servings</label>
-                    </div>
-                </div> -->
+                </div>                
                 <div class="row">
                     <div class="input-field col s12">
                     <input value="{{ recipe.recipe_instructions }}" placeholder="List each Instruction - one per line" id="recipe_instructions" name="recipe_instructions" type="text" class="validate">
@@ -74,25 +60,14 @@
                         <span class="lever"></span>
                         Is veggy
                     </label>
-                </div>
-                <!--
-                <div class="row">
-                    <div class="input-field col s12">
-                        <select id="category" name="meal_category">
-                        <option value="" disabled selected>Is this for meat lovers, veggy lovers, or fish lovers?</option>
-                    {% for cat in categories %}
-                        <option value="{{cat.meal_category}}">{{cat.meal_category}}</option>
-                    {% endfor %}
-                    </select>
-                        <label>Recipe Category</label>
-                    </div>
-                </div>
-                -->
+                </div>                
                 <div class="row center">
-                     <button class="btn-large waves-effect waves-light orange" type="submit" name="action">Save Recipe Edit
+                    <button class="btn-large waves-effect waves-light orange" type="submit" name="action">Save Recipe Edit
                          <i class="material-icons right">playlist_add</i>
                     </button>
-                    
+                    <button class="btn-large waves-effect waves-light red" type="submit" href='/';>Cancel                         
+                         <i class="material-icons right">cancel</i>
+                    </button>                    
                 </div>
             </form>
             </div>    
