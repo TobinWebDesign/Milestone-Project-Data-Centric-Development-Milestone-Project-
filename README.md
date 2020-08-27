@@ -265,6 +265,7 @@ Update a Recipe ([CRUD] Update recipes)
 * Register User allowing anybody can register for free.
 * Log in and log out features
 * Delete option that will only be visible for a user on their own recipe pages.
+* Delete warning message with cancel and confirm buttons.
 * Edit option that will only be visible for a user on their own recipe pages.
 * Search Button,more filters to make recipes more easily accessible.
 * Page view counter for recipe pages
@@ -275,9 +276,10 @@ Update a Recipe ([CRUD] Update recipes)
 ## Testing
 
 Testing was performed in 3 different ways.
-- Browser Testing
-- User testing
-- Manual Testing
+* Browser Testing
+* User testing
+* Manual Testing
+* Atomated Testing
 
 ### Browser Testing
 While my main choice of browser for development is google chrome, I regularly checked the performance on the Microsoft Edge and Safari browsers. Making use of browser resizing and dev tools device toolbars on each browser to test responsiveness and how the grid, fonts and media queries were performing and the consistency between each. Adjusting to find a happy medium for all three.
@@ -292,28 +294,49 @@ View | Add | Edit | Delete | Search
 
 #### Add New Recipe
 
-* I added plenty of test recipes to check the functionality throughout the development. If I leave some of the required fields empty, I will not be able to submit the form. 
+I added plenty of test recipes to check the functionality throughout the development. If I leave some of the required fields empty, I will not be able to submit the form. 
+* Click on the "Add a Recipe" link in the navbar or the Hero section.
+* Ensure that the form appears correctly.
+* Attempt to submit the form with required fields blank and ensure that I'm prompted to fill them.
+* Submit a fully completed form.
+* Click on the link to the All Recipes or the link to the homage to view the recently add recipe.
+* Ensure that all pages that show recipes load correctly and that all entered details appearing ass expected.
+* Ensure that all the recipe details have been saved in the MonngoDB database.
 
 #### Edit Recipe
 
-* Edit recipe button is visible on the recipe page. Once clicked it opens a page with a form that allows the user to edit the recipe. 
+Edit recipe button is visible on the recipe page. Once clicked it opens a page with a form that allows the user to edit the recipe. 
+
+* Click on the Edit button at the bottom left of an individual recipe page.
+* Ensure that the form for editing the recipe loads with the correct recipe details.
+* Edit the recipe details and click the Submit button.
+* Ensure that the recipe reloads and the edits have been saved to the database.
+* Repeat the last three steps and click the Cancel button to ensure that it works recipe reloads with none of the cancelled changes saved to the database.
+
 #### Delete Recipe
 
 * Delete button is visible on the recipe page.  Once clicked it deletes the recipe from the database
-#### Search Recipe
 
-* The search box is visible on all pages and allows users search keywords in the recipe title. 
+#### Search Recipes
+
+The search box is visible on all pages and allows users search keywords in the recipe title. 
+* Enter various recipe items in the search bar.
+* Ensure that all recipes with those words, and only recipes with those words, are displayed in the results.
 
 ### Issues discovered while testing and how they were rectified.
 * This site was tested across multiple browsers (Chrome, Microsorft Edge, FireFox) and on multiple mobile devices (iPhone 4, 5, 7, 8, X, iPad, iPad Pro, Galaxy S5, Pixel 2, and Pixel 2XL) to ensure compatibility and responsiveness.  
 * For testing the responsive aspect of the website I used a Google Chrome Developer Tools
 * Side nav - the mobile side nav was not functioning correctly. This was rectifies by using URL_for as the source
 * Search box - there was a bug where I had incorrect defination resulting in the search_recipes page not displaying. I also had issues with searching for keyword in the recipe name. This was rectified with help from the toutors and my mentor. 
+
 ### Known Issues
 * The search box works effectively for words found in the recipe titles it is upper and lowercase sensitive sometimes resulting in no resipies being found. 
 
 
 ### Validators
+
+I used the W3C Markup Validation Service to check the HTML and the W3C CSS Validation Service to check the CSS. 
+The Jigsaw Validation Service gives error messages for Materialize CSS files. I disregarded those error messages.
 
 HTML -
 <a href="https://validator.w3.org/nu/#textarea">W3C HTML Validator</a>
@@ -324,6 +347,9 @@ JavaScript -
 Python
 <a href="http://pep8online.com/">PEP8 Online</a>
 
+### Automated Testing
+
+Automated testing ws conducted on app.py routes using tests.py at the root directory. This was achiceved by using the command python3 test.py in the Gitpod terminal. Four test were ran. All returned a status of 'ok'
 
 This website is currently viewable with no deployment issues in:
 * Google Chrome
