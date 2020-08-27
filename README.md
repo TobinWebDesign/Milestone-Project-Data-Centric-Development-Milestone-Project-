@@ -396,4 +396,4 @@ In order to deploy my project to Heroku I have completed the following steps, yo
 
 ## Acknowledgements
 
-My thanks to my mentor Anthony Ngene and the tutoring team at the Code Institute. The tutor team support has been excellent.  
+My thanks to my mentor Anthony Ngene awho helped me out with python issues, and the tutoring team at the Code Institute. The tutor team support has been excellent.  
