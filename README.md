@@ -363,28 +363,26 @@ This multi-page application was developed in Gitpod and version controlling was 
 
 In order to deploy my project to Heroku I have completed the following steps, you can view it <a href="https://recipify-food-app.herokuapp.com/">here</a>.
 
-Deploying this application was achieved by:
-* Created a Procfile with the command echo web: python run.py > Procfile.
-* Created a requirement.txt file so Heroku know what python modules it will need to run my application with the command pip freeze > requirements.txt
-* Created a new branch to test deployment to heroku changing MONGO_URI from local to mongo atlas, changed app.run() to set debug to False.
-* Created a new project on heroku and in the deploy section linked my github repository with heroku in order to deploy straight from the source.
+#### Deploying this application to Heroku was achieved by:
+* Create an app in Heroku
+* Create a Procfile with the command echo web: python run.py > Procfile.
+* Create a requirement.txt file so Heroku know what python modules it will need to run my application with the command pip freeze > requirements.txt
+* Create a new branch to test deployment to heroku changing MONGO_URI from local to mongo atlas, changed app.run() to set debug to False.
+* Create a new project on heroku and in the deploy section linked my github repository with heroku in order to deploy straight from the source.
 * Configured any environment variables in Heroku App Settings > Config Vars such as my Secret Key, IP PORT and MONGO_URI.
 * Finalised all code, and made sure that it was production ready and ensured that my .gitignore was not uploading any secret keys.
 * Deployed the application from heroku admin page using linked repository and master branch.
 * The application is now fully deployed to Heroku
 
-To clone the repository:
+#### To clone the repository:
 * Select the Repository from the Github Dashboard.
-* Click on the "Clone or download" green button located above and to the right of the File Structure table.
+* Click on the "Clone" green button located above and to the right of the File Structure table.
 * Click on the "clipboard icon" to the right of the Git URL to copy the web URL of the Clone.
 * Open yourthe Gitpod (IDE) and navigate to the terminal window.
 * Change the directory to where you want to clone the repository too.
 * Paste the Git URL copied from above and click "Ok".
 
 [Back to Top](#table-of-contents)
-
-### Deployment to Heroku
-
 
 
 ## Credits
@@ -398,4 +396,4 @@ To clone the repository:
 
 ## Acknowledgements
 
-My thanks to my mentor Anthony Ngene also helped me out with python issues and the tutoring team at the Code Institute. The tutor team support has been excellent.  
+My thanks to my mentor Anthony Ngene and the tutoring team at the Code Institute. The tutor team support has been excellent.  
