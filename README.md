@@ -389,11 +389,19 @@ In order to deploy my project to Heroku I have completed the following steps, yo
 
 * I got the recipes and images from <a href="https://www.bbc.co.uk/food/recipes">BBC FOOD</a> 
 * I got the website template from <a href="https://materializecss.com/getting-started.html">Materalize</a> 
+* I got the 404 and 500 gifs from <a href="https://www.canva.com/">Canva</a>
 * I got the python code from the Code institute lectures
 
-</ul>
+## Code Reference
+
+* https://www.tutorialspoint.com
+* https://www.w3schools.com
+* https://stackoverflow.com
 
 
 ## Acknowledgements
 
 My thanks to my mentor Anthony Ngene awho helped me out with python issues, and the tutoring team at the Code Institute. The tutor team support has been excellent.  
+
+## Disclaimer
+The content of this Website is for educational purposes only.
