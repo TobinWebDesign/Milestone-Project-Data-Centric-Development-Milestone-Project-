@@ -33,7 +33,7 @@ The project can be viewed <a href="https://recipify-food-app.herokuapp.com/">her
 
 
 ### Functionality of Project
-This application contains the key CRUD requirement functionality and utilises a data handling document based database, MongoDB. The user functionality is created using Flask, HTML templates and CSS. One of the most prominent frontend frameworks was used in building the frontend interface structure, Bootstrap, and includes all the main attributable points of a modern day website/application such as a Navigation bar and Footer elements.
+This application contains the key CRUD requirement functionality and utilises a data handling document based database, MongoDB. The user functionality is created using Flask, HTML templates and CSS. One of the most prominent frontend frameworks was used in building the frontend interface structure, Materialise, and includes all the main attributable points of a modern day website/application such as a Navigation bar and Footer elements.
 
 The project is version controlled via Git & Github and is deployed via Heroku. All environment variables are held in a git ignored file and held _secret_ to ensure the project integrity is held to present day and project requirement standards.
 
@@ -53,15 +53,12 @@ _Generic (Guest/Public) User:_
 #### Design
 
 ##### 1. Font
-The project has a main font <a href="https://fonts.google.com/specimen/Roboto">Roboto</a> which greatly complement each other throughout the site.
-  
+The project has a main font <a href="https://fonts.google.com/specimen/Roboto">Roboto</a> which greatly complement each other throughout the site. 
+Roboto is a user friendly font which give a proper reading in different screen sizes.
 “Sans-Serif” is used as the default backup font in cases where these fonts have difficulty loading.
-Maven Pro sports a unique curvature allowing it the ability to stand out and be distinguishable when in context. It is used throughout the site as the main font for headers, unique stand-out pieces of information and button text etc, drawing the user’s attention to these main focus points and calls to actions.
-
-The secondary font used is Roboto. With its natural widths per character, and increased effectiveness for reading rhythm, it was the perfect choice using this font for the lengthier text elements. Used on all major paragraphs, it offers a pleasing reading ability to the user and is easy on the eyes. This font is a staple used in many websites and applications today worldwide and is reminiscent of how an application should look, clean, professional and very readable amongst all major languages.
 
 ##### 2. Color Scheme
-This project went through multiple theme iterations whilst in Wireframe stage. Ultimately, I was always lead back to professional high contrast finish that would normally be seen in most day-to-day apps with a touch of pastel color to highlight to the user the breakaway elements.
+This project went through multiple theme iterations whilst in Wireframe stage. Ultimately, I was always lead back to professional high contrast finish that would normally be seen in most day-to-day apps.
 
 * ![#ffffff](https://placehold.it/15/ffffff/000000?text=+) `#ffffff` - Primary color
 * ![#03a9f4](https://placehold.it/15/03a9f4/000000?text=+) `#03a9f4` - Secondary color
@@ -233,8 +230,6 @@ The structure of the website is well-organised and easy navigation.
 * NoSQL database for storing back-end data.
 ### <a href="https://api.mongodb.com/python/current/">PyMongo</a>
 * for Python to get access the MongoDB database.
-### <a href="https://werkzeug.palletsprojects.com/en/0.16.x/">Werkzeug</a>
-* to generate and verify password hashing.
 ### <a href="https://jinja.palletsprojects.com/en/2.10.x/">Jinja</a>
 * templating language for Python, to display back-end data in HTML.
 ### <a href="https://heroku.com/">Heroku</a>
